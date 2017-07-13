@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>{{ans}}</h1>
+            <b><table border="1">
+             <tr style="color:Blue">
+                <th>User Name</th>
+                <th>Sport</th>
+             </tr>
+
+            {% for sprt  in sport %}
+
+            <tr style="text-align:center">
+                <td>{{ sprt.name}}</td>
+                <td>{{ sprt.sport}}</td>
+            </tr>
+            {% endfor %}
+        </table></b>
+    </body>
+</html>

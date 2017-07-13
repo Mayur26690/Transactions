@@ -7,4 +7,7 @@ urlpatterns = [
     url(r'^user/',views.User ),
     url(r'^movie/', views.Movie),
     url(r'^resturant/', views.Restaurant),
+    url(r'^hotel/', views.Hotel),
+    url(r'^shopping/', views.Shopping),
+    url(r'^sport/', views.Sport),
 ]

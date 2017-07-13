@@ -7,6 +7,10 @@
                 <th>User Name</th>
                 <th>Movie</th>
                 <th>Restaurant</th>
+                <th>Hotel</th>
+                <th>Shopping</th>
+                <th>Sport</th>
+                
              </tr>
 
             {% for user  in users %}
@@ -14,7 +18,10 @@
             <tr style="text-align:center">
                 <td>{{ user.name}}</td>
                 <td>{{ user.movie}}</td>
-                <td>{{ user.restaurant}}</td>
+                <td>{{ user.restaurent}}</td>
+                <td>{{ user.hotel}}</td>
+                <td>{{ user.shopping}}</td>
+                <td>{{ user.sport}}</td>
             </tr>
             {% endfor %}
         </table></b>

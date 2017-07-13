@@ -28,3 +28,21 @@ def Restaurant(req):
     ans = "Order by Resturant "
 
     return render(req,'amount/restaurant.html',{'ans':ans, 'restaurant':all})
+
+def Hotel(req):
+    all = models.Spent.objects.order_by("hotel")
+    ans = "Order by Hotel "
+
+    return render(req,'amount/hotel.html',{'ans':ans, 'hotel':all})
+
+def Shopping(req):
+    all = models.Spent.objects.order_by("shopping")
+    ans = "Order by Shopping "
+
+    return render(req,'amount/shopping.html',{'ans':ans, 'shopping':all})
+
+def Sport(req):
+    all = models.Spent.objects.order_by("sport")
+    ans = "Order by Sport "
+
+    return render(req,'amount/sport.html',{'ans':ans, 'sport':all})

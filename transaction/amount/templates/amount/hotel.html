@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>{{ans}}</h1>
+            <b><table border="1">
+             <tr style="color:Blue">
+                <th>User Name</th>
+                <th>Hotel</th>
+             </tr>
+
+            {% for htl  in hotel %}
+
+            <tr style="text-align:center">
+                <td>{{ htl.name}}</td>
+                <td>{{ htl.hotel}}</td>
+            </tr>
+            {% endfor %}
+        </table></b>
+    </body>
+</html>

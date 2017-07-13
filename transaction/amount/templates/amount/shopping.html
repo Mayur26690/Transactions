@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>{{ans}}</h1>
+            <b><table border="1">
+             <tr style="color:Blue">
+                <th>User Name</th>
+                <th>Shopping</th>
+             </tr>
+
+            {% for shp  in shopping %}
+
+            <tr style="text-align:center">
+                <td>{{ shp.name}}</td>
+                <td>{{ shp.shopping}}</td>
+            </tr>
+            {% endfor %}
+        </table></b>
+    </body>
+</html>
