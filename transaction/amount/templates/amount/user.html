@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>{{ans}}</h1>
+            <b><table border="1">
+             <tr style="color:Blue">
+                <th>User Name</th>
+                <th>Movie</th>
+                <th>Restaurant</th>
+             </tr>
+
+            {% for user  in users %}
+
+            <tr style="text-align:center">
+                <td>{{ user.name}}</td>
+                <td>{{ user.movie}}</td>
+                <td>{{ user.restaurant}}</td>
+            </tr>
+            {% endfor %}
+        </table></b>
+    </body>
+</html>
