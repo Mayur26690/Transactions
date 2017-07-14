@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^hotel/', views.Hotel),
     url(r'^shopping/', views.Shopping),
     url(r'^sport/', views.Sport),
+    url(r'^total/', views.Total),
 ]
