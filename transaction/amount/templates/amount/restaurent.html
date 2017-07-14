@@ -16,6 +16,10 @@
             </tr>
             {% endfor %}
         </table></b>
-    <p>Total Money Spent On Restaurent: ${{total}}</p>      
+    {% if total > 100 %}
+    <p>Total Money Spent On Movie: <b style="color:red">${{total}}</b></p> 
+    {% else %}
+    <p>Total Money Spent On Movie: ${{total}}</p> 
+    {% endif %}    
     </body>
 </html>
