@@ -24,11 +24,9 @@ from django.db import models
 #  		return str(self.movie)
 
 class Spent(models.Model):
-	name = models.CharField(max_length=20)
 	movie = models.PositiveIntegerField(default = '0')
 	hotel = models.PositiveIntegerField(default = '0')
 	restaurent = models.PositiveIntegerField(default = '0')
 	shopping = models.PositiveIntegerField(default = '0')
 	sport = models.PositiveIntegerField(default = '0')
-	def __str__(self):
-		return self.name
+	

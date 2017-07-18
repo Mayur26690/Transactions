@@ -24,7 +24,16 @@ def User(req):
      
 
     return render(req,'amount/user.html',{'ans':ans, 'users':all, 'total':total})
+def Datasheet(req):
+    all = models.Spent.objects.order_by("movie")
+    ans = "Order by Movie "
+    total = 0
+    for exp in all:
+        total += exp.movie
 
+    return render(req,'amount/movie.html',{'ans':ans, 'movies':all, 'total':total})
+
+    
 def Movie(req):
     all = models.Spent.objects.order_by("movie")
     ans = "Order by Movie "
