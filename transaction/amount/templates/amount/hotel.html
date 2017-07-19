@@ -7,6 +7,7 @@
                         }
         </style>
     </head>
+
     <body>
         <h1>{{ans}}</h1>
 
@@ -17,13 +18,13 @@
         {% for htl  in spent %}
         <tr style="text-align:center">
         {% if htl.movie > 15 %}    
-            <td style="color:red">{{ htl.movie}}</td></tr>
+            <td style="color:red">${{ htl.movie}}</td></tr>
         {% else %}
-             <td>{{ htl.movie}}</td></tr>  
+             <td>${{ htl.movie}}</td></tr>  
         {% endif %}      
         {% endfor %}
         </table></b>
-        <p><b>${{movie_total}}</b></p> 
+        <p><b>{{movie_total}}</b></p> 
 
 
         <b><table width="100">
@@ -33,14 +34,14 @@
         {% for htl  in spent %}
             <tr style="text-align:center">
         {% if htl.hotel > 15 %}    
-            <td style="color:red">{{ htl.hotel}}</td></tr>
+            <td style="color:red">${{ htl.hotel}}</td></tr>
         {% else %}
-             <td>{{ htl.hotel}}</td></tr>  
+             <td>${{ htl.hotel}}</td></tr>  
         {% endif %}         
         {% endfor %}
         
         </table></b>
-        <p><b>${{hotel_total}}</b></p> 
+        <p><b>{{hotel_total}}</b></p> 
 
 
         <b><table width="100">
@@ -51,13 +52,13 @@
         {% for htl  in spent %}
         <tr style="text-align:center">
         {% if htl.restaurent > 50 %}    
-            <td style="color:red">{{ htl.restaurent}}</td></tr>
+            <td style="color:red">${{ htl.restaurent}}</td></tr>
         {% else %}
-             <td>{{ htl.restaurent}}</td></tr>  
+             <td>${{ htl.restaurent}}</td></tr>  
         {% endif %}      
         {% endfor %}
         </table></b>
-        <p> <b>${{restaurent_total}}</b></p> 
+        <p> <b>{{restaurent_total}}</b></p> 
         
 
         <b><table width="100">
@@ -67,13 +68,13 @@
         {% for htl  in spent %}
             <tr style="text-align:center">
         {% if htl.shopping > 100 %}    
-            <td style="color:red">{{ htl.shopping}}</td></tr>
+            <td style="color:red">${{ htl.shopping}}</td></tr>
         {% else %}
-             <td>{{ htl.shopping}}</td></tr>
+             <td>${{ htl.shopping}}</td></tr>
         {% endif %}  
         {% endfor %}
         </table></b> 
-        <p> <b>${{shopping_total}}</b></p> 
+        <p> <b>{{shopping_total}}</b></p> 
 
         <b><table width="100">
             <tr style="color:Blue">
@@ -82,12 +83,12 @@
         {% for htl  in spent %}
             <tr style="text-align:center">
         {% if htl.sport > 50 %}    
-            <td style="color:red">{{ htl.sport}}</td></tr>
+            <td style="color:red">${{ htl.sport}}</td></tr>
         {% else %}
-             <td>{{ htl.sport}}</td></tr>  
+             <td>${{ htl.sport}}</td></tr>  
         {% endif %}
         {% endfor %}
         </table></b>  
-        <p> <b>${{sport_total}}</b></p> 
-        <p> <b>${{final_total}}</b></p> 
+        <p> <b>{{sport_total}}</b></p> 
+        <p> <b>{{final_total}}</b></p> 
 </html>
