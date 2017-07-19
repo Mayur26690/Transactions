@@ -2,23 +2,90 @@
 <html>
     <body>
         <h1>{{ans}}</h1>
-            <b><table border="1">
-             <tr style="color:Blue">
-                <th>User Name</th>
-                <th>Hotel</th>
-             </tr>
-
-            {% for htl  in hotel %}
-
-            <tr style="text-align:center">
-                <td>{{ htl.name}}</td>
-                <td>{{ htl.hotel}}</td>
+        <b><table border="1">
+            <tr style="color:Blue">
+                <th>Movie</th>
             </tr>
-            {% endfor %}
+    
+        {% for htl  in spent %}
+        <tr style="text-align:center">
+        {% if htl.movie > 15 %}    
+            <td style="color:red">{{ htl.movie}}</td></tr>
+        {% else %}
+             <td>{{ htl.movie}}</td></tr>  
+        {% endif %}      
+        {% endfor %}
         </table></b>
-    {% if total > 150 %}
-    <p>Total Money Spent On Movie: <b style="color:red">${{total}}</b></p> 
-    {% else %}
-    <p>Total Money Spent On Movie: ${{total}}</p> 
-    {% endif %}
+        {% if movie_total > 150 %}
+            <p><b style="color:red">${{movie_total}}</b></p> 
+        {% else %}
+            <p>${{movie_total}}</p> 
+        {% endif %}
+
+        <b><table border="1">
+            <tr style="color:Blue">
+                <th>Hotel</th>
+            </tr>
+
+        {% for htl  in spent %}
+            <tr style="text-align:center">
+            <td>{{ htl.hotel}}</td></tr>
+        {% endfor %}
+        
+        </table></b>
+        {% if hotel_total > 150 %}
+            <p><b style="color:red">${{hotel_total}}</b></p> 
+        {% else %}
+            <p>${{hotel_total}}</p> 
+        {% endif %}
+
+        <b><table border="1">
+            <tr style="color:Blue">
+                <th>Restaurent</th>
+            </tr>
+
+        {% for htl  in spent %}
+        <tr style="text-align:center">
+            <td>{{ htl.restaurent}}</td></tr>
+        {% endfor %}
+        </table></b>
+
+        {% if restaurent_total > 150 %}
+            <p> <b style="color:red">${{restaurent_total}}</b></p> 
+        {% else %}
+            <p> ${{restaurent_total}}</p> 
+        {% endif %}
+
+        <b><table border="1">
+            <tr style="color:Blue">
+                <th>Shopping</th>
+            </tr>
+        {% for htl  in spent %}
+            <tr style="text-align:center">
+                <td>{{ htl.shopping}}</td>
+            </tr>
+        {% endfor %}
+        </table></b> 
+        {% if shopping_total > 150 %}
+            <p> <b style="color:red">${{shopping_total}}</b></p> 
+        {% else %}
+            <p> ${{shopping_total}}</p> 
+        {% endif %}
+        
+        <b><table border="1">
+            <tr style="color:Blue">
+                <th>Sport</th>
+            </tr>
+        {% for htl  in spent %}
+            <tr style="text-align:center">
+                <td>{{ htl.sport}}</td>
+            </tr>
+        {% endfor %}
+        </table></b>  
+        {% if sport_total > 150 %}
+            <p> <b style="color:red">${{sport_total}}</b></p> 
+        {% else %}
+            <p>${{sport_total}}</p> 
+        {% endif %}                
+    
 </html>

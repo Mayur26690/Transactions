@@ -7,5 +7,5 @@ from .models import Spent
 
 class SpentAdmin(admin.ModelAdmin):
 	list_display = ('movie', 'hotel', 'restaurent','shopping','sport')
-
+	ordering = ['movie','hotel']
 admin.site.register(Spent, SpentAdmin)

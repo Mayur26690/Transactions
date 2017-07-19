@@ -29,4 +29,7 @@ class Spent(models.Model):
 	restaurent = models.PositiveIntegerField(default = '0')
 	shopping = models.PositiveIntegerField(default = '0')
 	sport = models.PositiveIntegerField(default = '0')
+
+	def __int__(self):
+		return self.id
 	
